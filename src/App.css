@@ -1,0 +1,61 @@
+.App {
+  /* text-align: center; */
+}
+
+.App-header {
+  background-color: #222;
+  padding: 20px;
+  color: white;
+}
+
+.App-header a {
+  color: white;
+  text-decoration: underline;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.tier-8 { background: #0074D9; }
+.tier-7 { background: #7FDBFF; }
+.tier-6 { background: #39CCCC; }
+.tier-5 { background: #3D9970; }
+.tier-4 { background: #2ECC40; }
+.tier-3 { background: #01FF70; }
+.tier-2 { background: #FFDC00; }
+.tier-1 { background: #AAAAAA; }
+.tier-0 { background: #DDDDDD; }
+
+.Collapsible__contentInner {
+  padding: 10px;
+  border: 1px solid #ebebeb;
+  border-top: 0; }
+  .Collapsible__contentInner p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 20px; }
+    .Collapsible__contentInner p:last-child {
+      margin-bottom: 0; }
+
+.Collapsible__trigger {
+  display: block;
+  font-weight: 400;
+  text-decoration: none;
+  color: #333333;
+  position: relative;
+  border: 1px solid white;
+  padding: 10px;
+  color: white; }
+  .Collapsible__trigger:after {
+    content: '\25BC';
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: block;
+    transition: transform 50ms; }
+  .Collapsible__trigger.is-open:after {
+    transform: rotateZ(180deg); }
+  .Collapsible__trigger.is-disabled {
+    opacity: 0.5;
+    background-color: grey; }
