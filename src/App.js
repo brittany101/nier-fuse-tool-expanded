@@ -6,16 +6,14 @@ import './App.css';
 const MINIMUM_COSTS = [4, 5, 6, 7, 9, 11, 14, 17, 21];
 
 function buildPlan(tier, cost) {
-  // We stop at 1 instead of 0 because the math breaks down a little.
-  if (tier <= 1) {
-    return {"tier": 1, "cost": cost, "children": [
-      {"tier": 0, "cost": 4, "children": []},
-      {"tier": 0, "cost": 5, "children": []},
-    ]};
+  if (tier <= 0) {
+    return {"tier": 0, "cost": cost, "children": []};
   }
+  // Special case for tier 0 because the math breaks down a little.
+  const tierCost = (tier == 1) ? 1 : (tier - 1);
   return {"tier": tier, "cost": cost, "children": [
-    buildPlan(tier - 1, cost - Math.ceil((tier - 1) / 2)),
-    buildPlan(tier - 1, cost - Math.floor((tier - 1) / 2)),
+    buildPlan(tier - 1, cost - Math.ceil(tierCost / 2)),
+    buildPlan(tier - 1, cost - Math.floor(tierCost / 2)),
   ]};
 }
 
