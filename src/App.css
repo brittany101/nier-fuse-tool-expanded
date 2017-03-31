@@ -46,7 +46,7 @@
   position: relative;
   border: 1px solid white;
   padding: 10px;
-  color: white; }
+  color: #333; }
   .Collapsible__trigger:after {
     content: '\25BC';
     position: absolute;
@@ -59,3 +59,7 @@
   .Collapsible__trigger.is-disabled {
     opacity: 0.5;
     background-color: grey; }
+  .Collapsible__trigger.tier-8 {
+    color: #EEE; }
+  .Collapsible__trigger.tier-5 {
+    color: #EEE; }
